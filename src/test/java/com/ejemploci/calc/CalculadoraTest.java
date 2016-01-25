@@ -46,17 +46,16 @@ public class CalculadoraTest {
 		assertEquals(1, result);
 	}
 
-	@Test
+	@Test(expected=RuntimeException.class)
 	public void testDivisionFail() {
 		System.out.println("Ejecutar Caculador.division() -> Falla con x/0");
-		int x = calculadora.product(5, 0);
-		expectedEx.expect(RuntimeException.class);
+		int x = calculadora.division(5, 0);
 	}
 
 	@Test
 	public void testProduct() {
 		System.out.println("Ejecutar Caculador.product()");
-		int result = calculadora.product(5, 3);
+		int result = calculadora.producto(5, 3);
 		assertEquals(15, result);
 	}
 }

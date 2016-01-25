@@ -19,9 +19,9 @@ public class Calculadora {
 		return a - b;
 	}
 	public int division(int a, int b){
-		return a / b;
+		return (b == 0)? 0 : a / b;
 	}
-	public int product(int a, int b){
+	public int producto(int a, int b){
 		return a * b;
 	}
 }
